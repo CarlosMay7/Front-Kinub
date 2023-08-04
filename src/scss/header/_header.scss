@@ -1,0 +1,26 @@
+@use 'base/variables' as v;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 8rem; 
+    border-bottom: 1px solid v.$negro;  
+
+    &__logo {
+        flex-grow: 4;
+    }
+}
+
+.navegacion {
+    flex-grow: 5;
+    display: flex;
+    justify-content: space-around;
+    gap: 5rem;
+
+    &__link {
+        color: v.$primario;
+        font-weight: 700;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+    }
+}
