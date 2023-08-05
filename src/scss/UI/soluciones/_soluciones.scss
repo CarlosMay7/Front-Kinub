@@ -1,0 +1,61 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.soluciones {
+
+    &__heading {
+        margin: 3rem auto;
+    }
+    &__grid {
+        padding: 0 4rem;
+        @include m.tablet{
+            @include m.grid(2, 4rem);         
+        }
+
+        @include m.desktop{
+            @include m.grid(4, 2rem);         
+        }
+    }
+
+}
+
+.solucion {
+    
+    &__icono {
+        width: 20rem;
+        height: 20rem;
+        margin: 0 auto;
+    }
+
+    &__nombre {
+        margin: 0;
+        text-align: center;
+    }
+
+    &__descripcion {
+        margin: 0;
+        text-align: center;
+    }
+    
+    &__icono,
+    &__nombre,
+    &__descripcion {
+        transition: transform 300ms ease-in-out;
+    }
+
+    transition: background-color 300ms ease-in-out;
+
+    &:hover {
+        background-color: v.$primario;
+        .solucion__icono,
+        .solucion__nombre {
+            transform: scale(0.7);
+            transform: translateY(-.7rem)
+        }
+
+
+        .solucion__descripcion {
+            transform: scale(1.2);
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer {
+
+    &__grid {
+        @include m.grid(3, 2rem);
+        padding: 4rem 2rem;
+    }
+}
+
+.redes {
+    display: flex;
+    justify-content: space-around;
+}

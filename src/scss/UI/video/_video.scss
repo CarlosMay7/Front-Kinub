@@ -1,0 +1,13 @@
+@use 'base/variables' as v;
+
+.video {
+    display: flex;
+    justify-content: center;    
+
+    &__contenedor {
+        width: 70rem;
+        height: 40rem;
+        overflow: hidden;
+        box-shadow: 0px 0px 50px v.$gris;
+    }
+}
