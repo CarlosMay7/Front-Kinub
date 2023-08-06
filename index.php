@@ -12,8 +12,9 @@
 <body>
 
     <header class="header">
+
         <div class="header__logo">
-            <a href="/">Logo</a>
+            <a href="/">Kinub</a>
         </div>
 
         <nav class="navegacion">
@@ -23,6 +24,33 @@
             <a href="#" class="navegacion__link">Contacto</a>
         </nav>
     </header>
+
+    <div class="header-mobile">
+        <a class="header-mobile__logo" href="/">Kinub</a>
+
+        <div class="header-mobile__menu">
+            <img id="mobile-menu" src="/src/img/menu.svg" alt="Menu desplegable">
+        </div>
+    </div>
+
+    <aside class="sidebar"> 
+        <div class="sidebar__header">
+
+            <!--Imagen logo--><a href="/"><h2>Kinub</h2></a>
+
+            <div class="sidebar__cerrar">
+                <img id="cerrar-menu" src="/src/img/cerrar.svg" alt="imagen cerrar menu">
+            </div>
+        </div>
+
+        <!--Falta funcion mostrar enlace activo-->
+        <nav class="navegacion-mobile">
+            <a href="#" class="navegacion-mobile__link activo">Equipos</a>
+            <a href="#" class="navegacion-mobile__link">Soporte técnico</a>
+            <a href="#" class="navegacion-mobile__link">Certificados</a>
+            <a href="#" class="navegacion-mobile__link">Contacto</a>
+        </nav>
+    </aside>
 
     <section class="nosotros">
         <div class="nosotros__grid">
@@ -98,21 +126,45 @@
     
     <footer class="footer">
         <div class="footer__grid">
-            <a href="#" class="footer__link">Aviso de privacidad</a>
+            <a href="#" class="footer__aviso">Aviso de privacidad</a>
 
             <div class="redes">
-                <div class="red">
+                <a class="redes__link" href="https://youtube.com"><span class="redes__accesible">YouTube</span></a>
+                <a class="redes__link" href="https://linkedin.com"><span class="redes__accesible">Linkedin</span></a>
                 <a class="redes__link" href="https://facebook.com"><span class="redes__accesible">Facebook</span></a>
-                <a class="redes__link" href="https://facebook.com"><span class="redes__accesible">Facebook</span></a>
-                <a class="redes__link" href="https://facebook.com"><span class="redes__accesible">Facebook</span></a>
-                <a class="redes__link" href="https://facebook.com"><span class="redes__accesible">Facebook</span></a>
-                </div>
+                <a class="redes__link" href="https://instagram.com"><span class="redes__accesible">Instagram</span></a>
             </div>
         </div>
     </footer>
 
+    <section class="contacto">
+        <form class="formulario">
+            
+            <div class="formulario__campo">
+                <label for="nombre-producto" class="formulario__label">Nombre del Producto</label>
+                <input id="nombre-producto" type="text" class="formulario__input">
+            </div>
+
+            <div class="formulario__campo">
+                <label for="nombre-solicitante" class="formulario__label">Nombre del Solicitante</label>
+                <input id="nombre-solicitante" type="text" class="formulario__input">
+            </div>
+
+            <div class="formulario__campo">
+                <label for="correo" class="formulario__label">E-Mail</label>
+                <input id="correo" type="email" class="formulario__input">
+            </div>
+
+            <div class="formulario__campo">
+                <label for="mensaje" class="formulario__label">Mensaje</label>
+                <textarea id="mensaje" cols="30" rows="10"></textarea>
+            </div>
+        </form>
+    </section>
+
     <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="/youtube.js"></script>
+    <script src="/src/js/youtube.js"></script>
+    <script src="/src/js/menuMobile.js"></script>
 </body>
 
 </html>

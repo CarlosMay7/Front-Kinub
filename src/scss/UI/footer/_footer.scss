@@ -2,14 +2,96 @@
 @use 'base/mixins' as m;
 
 .footer {
+    background-color: lightblue;
+    margin-top: 2rem;
+    box-shadow: 0px 0px 20px v.$gris;
 
+    @include m.tablet{
+        padding: 2rem 0;
+    }
     &__grid {
-        @include m.grid(3, 2rem);
-        padding: 4rem 2rem;
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+
+        @include m.tablet{
+            grid-template-rows: unset;
+            @include m.grid(2, 2rem);
+            align-items: center;
+        }
+    }
+
+    &__aviso {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: v.$primario;
+
+        @include m.tablet{
+            margin: 0;
+        }
+
+        &:hover {
+            color: lighten(v.$primario, 20%);
+        }
     }
 }
 
 .redes {
+    grid-row: 1 / 2;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+
+    @include m.tablet{
+        gap: 4rem;
+        margin: 0;
+    }
+
+    &__link {
+        &::before {
+            content: "";
+            display: block;
+            padding: 2rem;
+            background-color: v.$primario;
+            background-size: cover;
+            border-radius: 40%;
+
+            @include m.tablet{
+                margin: 0;
+                height: 4rem;
+                width: 4rem;
+            }
+        }
+
+        &[href*="facebook.com"]::before {
+            background-image: url(/src/img/icono_facebook.svg);
+        }
+
+        &[href*="instagram.com"]::before {
+            background-image: url(/src/img/icono_instagram.svg);
+            background-size: cover;
+        }
+
+        &[href*="youtube.com"]::before {
+            background-image: url(/src/img/icono_youtube.svg);
+            background-size: cover;
+        }
+
+        &[href*="linkedin.com"]::before {
+            background-image: url(/src/img/icono_linkedin.svg);
+            background-size: cover;
+        }
+    }
+
+    
+    &__accesible {
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+        display: block;
+    }
 }
