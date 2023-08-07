@@ -8,7 +8,6 @@
     @include m.tablet{
         &__grid {
             @include m.grid(2, 4rem);
-            margin: 5rem 0;
             padding-right: 5rem;
         }   
     }
