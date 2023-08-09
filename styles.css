@@ -1,0 +1,25 @@
+#img            {cursor:crosshair;border:1px solid #ccc;}
+
+#square         {position:absolute;width:100px;height:100px;border:1px solid;cursor:crosshair;}
+
+#imgSmall       {width:200px;height:200px;overflow:hidden;border:1px solid #000;}
+
+#imgSmall img   {position:relative;}
+
+
+.wrapper {
+width: 80%;
+margin: 5px auto;
+}
+
+.fuente {
+margin-top: 2rem;
+}
+.fuente a {
+font-size: 1.5rem;
+text-decoration: none;
+color: Blue;
+}
+.fuente a:hover {
+color: red; 
+}
