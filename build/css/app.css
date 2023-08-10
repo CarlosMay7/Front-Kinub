@@ -351,6 +351,12 @@ ul {
   margin: 0;
 }
 
+.contenedor-sm {
+  max-width: 70rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
 h1, h2, h3 {
   font-family: "Merriweather", serif;
   margin: 0 0 5rem 0;
@@ -372,7 +378,7 @@ h3 {
 }
 
 .header {
-  box-shadow: 0px 7px 15px 0px #939393;
+  box-shadow: 0px 1px 10px 0px #b4b4b4;
   padding: 3rem 2rem;
   display: none;
 }
@@ -394,7 +400,7 @@ h3 {
 }
 
 .header-mobile {
-  box-shadow: 0px 7px 15px 0px #939393;
+  box-shadow: 0px 1px 10px 0px #b4b4b4;
   padding: 3rem 2rem;
   display: flex;
   align-items: center;
@@ -514,6 +520,21 @@ h3 {
   border-radius: 0.5rem;
 }
 
+.btn-whatsapp {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: #25D366;
+  border: none;
+  border-radius: 50%;
+  z-index: 100;
+}
+.btn-whatsapp:hover {
+  cursor: pointer;
+}
+
 .nosotros {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -570,7 +591,7 @@ h3 {
   width: 70rem;
   height: 40rem;
   overflow: hidden;
-  box-shadow: 0px 0px 50px #939393;
+  box-shadow: 0px 0px 50px #b4b4b4;
 }
 
 .soluciones__heading {
@@ -630,10 +651,50 @@ h3 {
   transform: scale(1.2);
 }
 
+.formulario {
+  position: relative;
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-direction: column;
+  background: linear-gradient(120deg, #002378, #0032ab, #12c4ff);
+  border-radius: 2rem;
+  padding: 5rem 3rem;
+  color: #FFFFFF;
+}
+.formulario__icono {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+}
+@media (min-width: 768px) {
+  .formulario__icono {
+    top: -1rem;
+    right: -2rem;
+  }
+}
+.formulario__legend {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: clamp(2rem, -0.8rem + 10vw, 6rem);
+  margin-bottom: 2rem;
+}
+.formulario__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.formulario__input, .formulario__textarea {
+  background-color: transparent;
+  border: 0.1rem solid #FFFFFF;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+
 .footer {
   background-color: lightblue;
   margin-top: 2rem;
-  box-shadow: 0px 0px 20px #939393;
+  box-shadow: 0px 0px 20px #b4b4b4;
 }
 @media (min-width: 768px) {
   .footer {

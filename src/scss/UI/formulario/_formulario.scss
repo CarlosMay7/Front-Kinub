@@ -1,0 +1,43 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.formulario {
+    position: relative;
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-direction: column;
+    background: linear-gradient(120deg, darken(v.$primario, 10%), v.$primario, lighten(v.$secundario, 10%));
+    border-radius: 2rem;
+    padding: 5rem 3rem;
+    color: v.$blanco;
+
+    &__icono {
+        position: absolute;
+        top: -1rem;
+        right: -1rem;
+
+        @include m.tablet {
+            top: -1rem;
+            right: -2rem;
+        }
+    }
+    &__legend {
+        text-transform: uppercase;
+        font-weight: bold;
+        @include m.texto-fluido(2rem, 6rem);
+        margin-bottom: 2rem;
+    }
+    &__campo {
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+    }
+    &__input,
+    &__textarea {
+        background-color: transparent;
+        border: .1rem solid v.$blanco;
+        border-radius: 1rem;
+        padding: .5rem 1rem;
+    }
+}

@@ -1,37 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kinub - Home</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/build/css/app.css">
-</head>
-<body>
-
-    <header class="header">
-
-        <div class="header__logo">
-            <a href="/">Kinub</a>
-        </div>
-
-        <nav class="navegacion">
-            <a href="#" class="navegacion__link">Equipos</a>
-            <a href="#" class="navegacion__link">Soporte técnico</a>
-            <a href="#" class="navegacion__link">Certificados</a>
-            <a href="#" class="navegacion__link">Contacto</a>
-        </nav>
-    </header>
-
-    <div class="header-mobile">
-        <a class="header-mobile__logo" href="/">Kinub</a>
-
-        <div class="header-mobile__menu">
-            <img id="mobile-menu" src="/src/img/menu.svg" alt="Menu desplegable">
-        </div>
-    </div>
+<?php 
+include_once __DIR__.'/templates/header.php';
+?>
 
     <aside class="sidebar"> 
         <div class="sidebar__header">
@@ -123,22 +92,15 @@
             </div> <!--Solucion-->
         </div>
     </section>
-    
-    <footer class="footer">
-        <div class="footer__grid">
-            <a href="#" class="footer__aviso">Aviso de privacidad</a>
 
-            <div class="redes">
-                <a class="redes__link" href="https://youtube.com"><span class="redes__accesible">YouTube</span></a>
-                <a class="redes__link" href="https://linkedin.com"><span class="redes__accesible">Linkedin</span></a>
-                <a class="redes__link" href="https://facebook.com"><span class="redes__accesible">Facebook</span></a>
-                <a class="redes__link" href="https://instagram.com"><span class="redes__accesible">Instagram</span></a>
+    <section>
+        <form class="contenedor-sm formulario">
+
+            <div class="formulario__icono">
+                <svg xmlns="http://www.w3.org/2000/svg" height="60px" fill="#53d4ff" viewBox="0 0 512 512"><path d="M16.1 260.2c-22.6 12.9-20.5 47.3 3.6 57.3L160 376V479.3c0 18.1 14.6 32.7 32.7 32.7c9.7 0 18.9-4.3 25.1-11.8l62-74.3 123.9 51.6c18.9 7.9 40.8-4.5 43.9-24.7l64-416c1.9-12.1-3.4-24.3-13.5-31.2s-23.3-7.5-34-1.4l-448 256zm52.1 25.5L409.7 90.6 190.1 336l1.2 1L68.2 285.7zM403.3 425.4L236.7 355.9 450.8 116.6 403.3 425.4z"/></svg>
             </div>
-        </div>
-    </footer>
 
-    <section class="contacto">
-        <form class="formulario">
+            <legend class="formulario__legend">Contáctanos</legend>
             
             <div class="formulario__campo">
                 <label for="nombre-producto" class="formulario__label">Nombre del Producto</label>
@@ -157,14 +119,11 @@
 
             <div class="formulario__campo">
                 <label for="mensaje" class="formulario__label">Mensaje</label>
-                <textarea id="mensaje" cols="30" rows="10"></textarea>
+                <textarea id="mensaje" cols="30" rows="10" class="formulario__textarea"></textarea>
             </div>
         </form>
     </section>
 
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="/src/js/youtube.js"></script>
-    <script src="/src/js/menuMobile.js"></script>
-</body>
-
-</html>
+<?php 
+include_once __DIR__.'/templates/footer.php';
+?>
