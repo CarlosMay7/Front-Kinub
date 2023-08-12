@@ -2,7 +2,7 @@
 @use 'base/mixins' as m;
 
 .header {
-    box-shadow: 0px 7px 15px 0px v.$gris;   
+    box-shadow: 0px 1px 10px 0px v.$gris;   
     padding: 3rem 2rem;
     display: none;
 
@@ -24,7 +24,7 @@
 }
 
 .header-mobile {
-    box-shadow: 0px 7px 15px 0px v.$gris;   
+    box-shadow: 0px 1px 10px 0px v.$gris;   
     padding: 3rem 2rem;
     display: flex;
     align-items: center;
