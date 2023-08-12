@@ -1,0 +1,65 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.equipos {
+    text-align: center;
+    &__heading {
+        margin-top: 2rem;
+        @include m.heading;
+    }
+
+    &__contenido {
+        margin-top: 5rem;
+        padding: 5rem  0;
+        @include m.bgImg("/src/img/taylor.jpg");
+    }
+
+    &__grid {
+
+        @include m.grid(1, 2rem);
+        @include m.tablet{
+            @include m.grid(2, 2rem);
+        }
+        @include m.desktop {
+            @include m.grid(3, 2rem);
+        }
+    }
+}
+
+.equipo {
+
+    border: 2px solid v.$blanco;
+    padding: 2rem;
+    &__icono {
+        width: 15rem;
+        height: 15rem;
+        margin: 0 auto;
+        @include m.tablet{
+            width: 20rem;
+            height: 20rem;
+        }
+    }
+
+    &__nombre {
+        margin-bottom: 1rem;
+    }
+
+    &__icono,
+    &__nombre {
+        transition-property: transform;
+        transition-duration: 300ms;
+    }
+
+    transition: background-color 300ms ease-in-out;
+
+    &:hover {
+        background-color: v.$primario;
+        .equipo__icono,
+        .equipo__nombre {
+            transform: scale(0.7);
+            transform: translateY(-.7rem)
+        }
+
+        cursor: pointer;
+    }
+}
