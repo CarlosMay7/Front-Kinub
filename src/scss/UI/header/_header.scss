@@ -5,7 +5,7 @@
     box-shadow: 0px 1px 10px 0px v.$gris;   
     padding: 3rem 2rem;
     display: none;
-
+    
     @include m.tablet{
         display: flex;
         justify-content: space-between;
@@ -16,11 +16,16 @@
             flex-grow: 5;
         }   
     }    
-
     @include m.desktop {
         padding: 3rem 7rem; 
     }
-
+    &--fixed {
+        position: fixed;
+        background-color: v.$blanco;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
 }
 
 .header-mobile {

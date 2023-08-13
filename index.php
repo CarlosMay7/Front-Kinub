@@ -70,7 +70,7 @@ include_once __DIR__.'/templates/video.php';
     </div>
 </section>
 
-<section>
+<section id="formulario">
     <form class="contenedor-sm formulario">
 
         <div class="formulario__icono">
