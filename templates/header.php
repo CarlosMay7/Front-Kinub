@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/build/css/app.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header-nav">
         <div class="header__logo">
             <a href="index.php">Kinub</a>
         </div>
@@ -20,7 +20,7 @@
             <a href="equipos.php" class="navegacion__link">Equipos</a>
             <a href="#" class="navegacion__link">Soporte técnico</a>
             <a href="certificados.php" class="navegacion__link">Certificados</a>
-            <a href="#" class="navegacion__link">Contacto</a>
+            <a href="index.php#formulario" class="navegacion__link">Contacto</a>
         </nav>
     </header>
 
@@ -53,7 +53,7 @@
     <nav class="navegacion-mobile">
         <a href="equipos.php" class="navegacion-mobile__link activo">Equipos</a>
         <a href="#" class="navegacion-mobile__link">Soporte técnico</a>
-        <a href="#" class="navegacion-mobile__link">Certificados</a>
-        <a href="#" class="navegacion-mobile__link">Contacto</a>
+        <a href="certificados.php" class="navegacion-mobile__link">Certificados</a>
+        <a href="index.php#formulario" class="navegacion-mobile__link">Contacto</a>
     </nav>
 </aside>
