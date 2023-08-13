@@ -10,51 +10,58 @@
     
     <form class="busqueda">
         <div class="busqueda__campo--nombre">
-            <input class="busqueda__nombre" type="text" placeholder="Ingrese el nombre del producto">
+            <input class="busqueda__nombre" type="text" placeholder="Ingrese el nombre del producto" id="nombre">
         </div>
 
-        <div class="desplegable d-inline-flex gap-1">
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="#tags" role="button" aria-expanded="false" aria-controls="tags">
-                Elige por tags
-            </a>
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#categorias" aria-expanded="false" aria-controls="categorias">
-                Elige por categorias
-            </button>
+        <div class="busqueda__botones">
+            <a class="busqueda__boton" data-bs-toggle="collapse" href="#tags" role="button" aria-expanded="false" aria-controls="tags">Seleccione tags</a>
+            <a class="busqueda__boton" data-bs-toggle="collapse" href="#categorias" role="button" aria-expanded="false" aria-controls="categorias">Seleccione una categoria</a>
         </div>
-        <!-- <div class="collapse" >
-            <div class="card card-body">
-                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+
+        <div class="busqueda__desplegables" >
+            
+            <div class="busqueda__elemento">
+                <div class="busqueda__checkboxes collapse multi-collapse" id="tags">
+                    <div class="busqueda__campo">
+                        <label class="busqueda__label" for="tag1">Tag 1</label>
+                        <input class="busqueda__checkbox" type="checkbox" id="tag1" name="tags" value="tag1">
+                    </div>
+
+                    <div class="busqueda__campo">
+                        <label class="busqueda__label" for="tag2">Tag 2</label>
+                        <input class="busqueda__checkbox" type="checkbox" id="tag2" name="tags" value="tag2">
+                    </div>
+
+                    <div class="busqueda__campo">
+                        <label class="busqueda__label" for="tag3">Tag 3</label>
+                        <input class="busqueda__checkbox" type="checkbox" id="tag3" name="tags" value="tag3">
+                    </div>
+
+                    <div class="busqueda__campo">
+                        <label class="busqueda__label" for="tag4">Tag 4</label>
+                        <input class="busqueda__checkbox" type="checkbox" id="tag4" name="tags" value="tag4">
+                    </div>
+                </div>
             </div>
-        </div> -->
 
-        <div class="busqueda__campo collapse" id="tags">
-            
-            <label class="busqueda__label" for="tag1">Tag 1</label>
-            <input class="busqueda__checkbox" type="checkbox" id="tag1" name="tag1" value="tag1">
+            <div class="busqueda__elemento">
+                <div class="busqueda__radios collapse multi-collapse" id="categorias">
+                    <div class="busqueda__campo">
+                        <label class="busqueda__label" for="cat1">Categoria 1</label>
+                        <input class="busqueda__radio" type="radio" id="cat1" name="categorias" value="cat1">
+                    </div>
 
-            <label class="busqueda__label" for="tag1">Tag 1</label>
-            <input class="busqueda__checkbox" type="checkbox" id="tag1" name="tag1" value="tag1">
+                    <div class="busqueda__campo">
+                        <label class="busqueda__label" for="cat2">Categoria 2</label>
+                        <input class="busqueda__radio" type="radio" id="cat2" name="categorias" value="cat2">
+                    </div>
 
-            <label class="busqueda__label" for="tag1">Tag 1</label>
-            <input class="busqueda__checkbox" type="checkbox" id="tag1" name="tag1" value="tag1">
-
-            <label class="busqueda__label" for="tag1">Tag 1</label>
-            <input class="busqueda__checkbox" type="checkbox" id="tag1" name="tag1" value="tag1">
-
-            <label class="busqueda__label" for="tag1">Tag 1</label>
-            <input class="busqueda__checkbox" type="checkbox" id="tag1" name="tag1" value="tag1">
-        </div>
-
-        <div class="busqueda__campo collapse" id="categorias">
-            
-            <label class="busqueda__label" for="cat1">Categoria 1</label>
-            <input class="busqueda__radio" type="radio" id="cat1" name="categorias" value="cat1">
-
-            <label class="busqueda__label" for="cat2">Categoria 2</label>
-            <input class="busqueda__radio" type="radio" id="cat2" name="categorias" value="cat2">
-
-            <label class="busqueda__label" for="cat3">Categoria 3</label>
-            <input class="busqueda__radio" type="radio" id="cat3" name="categorias" value="cat3">
+                    <div class="busqueda__campo">
+                        <label class="busqueda__label" for="cat3">Categoria 3</label>
+                        <input class="busqueda__radio" type="radio" id="cat3" name="categorias" value="cat3">
+                    </div>
+                </div>
+            </div>
         </div>
     </form>
 
