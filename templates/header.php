@@ -7,18 +7,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="/build/css/app.css">
 </head>
 <body>
     <header class="header">
         <div class="header__logo">
-            <a href="/">Kinub</a>
+            <a href="index.php">Kinub</a>
         </div>
 
         <nav class="navegacion">
-            <a href="#" class="navegacion__link">Equipos</a>
+            <a href="equipos.php" class="navegacion__link">Equipos</a>
             <a href="#" class="navegacion__link">Soporte técnico</a>
-            <a href="#" class="navegacion__link">Certificados</a>
+            <a href="certificados.php" class="navegacion__link">Certificados</a>
             <a href="#" class="navegacion__link">Contacto</a>
         </nav>
     </header>
@@ -36,3 +37,23 @@
             <img id="mobile-menu" src="/src/img/menu.svg" alt="Menu desplegable">
         </div>
     </div>
+
+<aside class="sidebar"> 
+    <div class="sidebar__header">
+
+        <!--Imagen logo-->
+        <a href="/"><h2>Kinub</h2></a>
+
+        <div class="sidebar__cerrar">
+            <img id="cerrar-menu" src="/src/img/cerrar.svg" alt="imagen cerrar menu">
+        </div>
+    </div>
+
+    <!--Falta funcion mostrar enlace activo-->
+    <nav class="navegacion-mobile">
+        <a href="equipos.php" class="navegacion-mobile__link activo">Equipos</a>
+        <a href="#" class="navegacion-mobile__link">Soporte técnico</a>
+        <a href="#" class="navegacion-mobile__link">Certificados</a>
+        <a href="#" class="navegacion-mobile__link">Contacto</a>
+    </nav>
+</aside>

@@ -11,6 +11,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="/src/js/whatsapp.js"></script>
     <script src="/src/js/youtube.js"></script>
