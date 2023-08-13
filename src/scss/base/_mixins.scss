@@ -50,3 +50,13 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+@mixin boton($colorTexto, $colorFondo){
+    background-color: $colorFondo;
+    color: $colorTexto;
+    border-radius: .5rem;
+    padding: .4rem;
+    @include tablet(){
+        padding: .5rem;
+    }
+}

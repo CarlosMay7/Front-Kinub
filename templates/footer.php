@@ -16,5 +16,6 @@
     <script src="/src/js/whatsapp.js"></script>
     <script src="/src/js/youtube.js"></script>
     <script src="/src/js/menuMobile.js"></script>
+    <script src="/src/js/productos.js"></script>
 </body>
 </html>
