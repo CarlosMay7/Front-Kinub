@@ -1,4 +1,3 @@
-(function(){
     //Crea un iframe en el div con el id
     let player;
     function onYouTubeIframeAPIReady() {
@@ -17,7 +16,7 @@
             }
         });
     }
-    
+        
     //Obtiene el id del video con regex
     function getId() {
         let id = "";
@@ -50,4 +49,3 @@
     function stopVideo() {
       player.stopVideo();
     }
-})()

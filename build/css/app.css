@@ -908,14 +908,20 @@ h3 {
 .busqueda__boton {
   background-color: #00a7de;
   color: #FFFFFF;
+  text-align: center;
   border-radius: 0.5rem;
   padding: 0.4rem;
+  transition-property: background-color;
+  transition-duration: 300ms;
   font-size: 1.5rem;
 }
 @media (min-width: 768px) {
   .busqueda__boton {
     padding: 0.5rem;
   }
+}
+.busqueda__boton:hover {
+  background-color: #1257ff;
 }
 @media (min-width: 768px) {
   .busqueda__boton {
@@ -973,6 +979,115 @@ h3 {
   font-weight: 900;
 }
 
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+  transition: border 300ms ease-in-out;
+}
+.producto__contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.producto__imagen {
+  height: 20rem;
+  width: 20rem;
+  transition: transform 300ms ease-in-out;
+}
+.producto__nombre {
+  margin: 0;
+  transition: transform 300ms ease-in-out;
+}
+.producto__boton {
+  background-color: #1257ff;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-property: background-color, transform;
+  transition-duration: 300ms;
+}
+@media (min-width: 768px) {
+  .producto__boton {
+    padding: 0.5rem;
+  }
+}
+.producto__boton:hover {
+  background-color: #1257ff;
+}
+.producto:hover {
+  border: 1px solid #00a7de;
+}
+.producto:hover .producto__imagen {
+  transform: scale(1.2);
+}
+.producto:hover .producto__nombre,
+.producto:hover .producto__boton {
+  transform: translateY(2rem);
+}
+
+.presentacion {
+  margin-top: 5rem;
+}
+.presentacion__grid {
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+.presentacion__informacion, .especificaciones__texto {
+  color: #818181;
+}
+.presentacion__informacion span, .especificaciones__texto span {
+  color: #686868;
+  font-weight: 700;
+}
+.presentacion__boton {
+  background-color: #0081ab;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  display: block;
+}
+@media (min-width: 768px) {
+  .presentacion__boton {
+    padding: 0.5rem;
+  }
+}
+.presentacion__boton:hover {
+  background-color: #1257ff;
+}
+
+.descripcion, .descarga, .especificaciones {
+  border-left: 10px solid #1257ff;
+  padding-left: 2rem;
+}
+.descripcion__heading {
+  color: #00a7de;
+  font-weight: 700;
+  text-align: left;
+  margin: 0;
+}
+.descripcion__texto {
+  color: #818181;
+}
+
+.especificaciones {
+  margin-top: 5rem;
+}
+.especificaciones__heading {
+  color: #00a7de;
+  font-weight: 700;
+  text-align: left;
+  margin: 0;
+}
 .certificados__heading {
   color: #0032ab;
   display: flex;

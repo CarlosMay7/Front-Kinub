@@ -5,8 +5,8 @@
     const radios = document.querySelectorAll('[name="categorias"]');
     radios.forEach( radio => radio.addEventListener("click", agregarCategoria));
 
-    const nombreProducto = document.querySelector("#nombre");
-    nombreProducto.addEventListener("input", agregarNombre);
+    // const nombreProducto = document.querySelector("#nombre");
+    // nombreProducto.addEventListener("input", agregarNombre);
     let busqueda = {
         nombre: "",
         categoria: "",
@@ -17,9 +17,9 @@
         let input = e.target.value;
         console.log(input);
 
-        if(length(input) > 4){
-            //Función de búsqueda
-        }
+        // if(length(input) > 4){
+        //     //Función de búsqueda
+        // }
     }
 
     function agregarCategoria(e){
