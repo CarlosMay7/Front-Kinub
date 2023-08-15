@@ -9,7 +9,8 @@
 .soporte-form {
     display: grid;
     grid-template-columns: repeat(3, 100%);
-    
+    transition: transform 300ms ease-in-out;
+
     &__fieldset {
         display: flex;
         flex-direction: column;
@@ -49,6 +50,8 @@
         border-radius: .5rem;
         background-color: v.$primario;
         color: v.$blanco;
+        text-align: center;
+        cursor: pointer;
     }
     &__btn {
         background-color: v.$primario;
@@ -59,9 +62,17 @@
 }
 .soporte-progreso {
     display: flex;
-    margin: 2rem 0;
+    width: 26rem;
+    margin: 2rem auto;
     justify-content: space-around;
-    
+
+    @include m.telefono {
+        width: 35rem;
+    }
+    @include m.tablet {
+        width: auto;
+        margin: 2rem 0;
+    }
     &__paso {
         width: 100%;
         text-align: center;
@@ -75,10 +86,19 @@
         }
     }
     &__nombre {
+        display: none;
         margin-bottom: .8rem;
         font-size: 1.8rem;
         font-weight: bold;
-        color: v.$primario;
+        color: v.$secundario;
+        transition: color 300ms ease;
+    
+        @include m.telefono {
+            display: block;
+        }
+        &--active {
+            color: v.$primario;
+        }
     }
     &__bullet {
         position: relative;
@@ -94,21 +114,33 @@
         background-color: v.$blanco;
         font-weight: bold;
         font-size: 1.7rem;
+        transition: all 300ms ease;
 
         &:after,
         &::before {
             content: '';
             position: absolute;
             height: .3rem;
-            width: 19rem;
+            width: 5rem;
             left: 4.1rem;
             background-color: v.$secundario;
+
+            @include m.telefono {
+                width: 11rem;
+            }
+            @include m.tablet {
+                width: 19rem;
+            }
         }
-        &::after {
-            transform: scaleX(0);
-            transform-origin: left;
-            animation: animate 400ms linear forwards;
-            background-color: v.$primario;
+        &--active {
+            border-color: v.$primario;
+
+            &::after {
+                transform: scaleX(0);
+                transform-origin: left;
+                animation: animate 400ms linear forwards;
+                background-color: v.$primario;
+            }
         }
     }
     &__check {

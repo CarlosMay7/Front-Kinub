@@ -45,8 +45,8 @@ include_once __DIR__.'/templates/header.php';
             </div>
         </div>
 
-        <form class="soporte-form">
-            <fieldset class="soporte-form__fieldset">
+        <form class="soporte-form" id="soporte-form">
+            <fieldset class="soporte-form__fieldset" id="soporte-fieldset-1">
                 <legend class="soporte-form__legend">Información del Cliente</legend>
 
                 <div class="soporte-form__campo">
@@ -82,10 +82,10 @@ include_once __DIR__.'/templates/header.php';
                     >
                 </div>
 
-                <button class="soporte-form__btn" id="btn-siguiente">Siguiente</button>
+                <a class="soporte-form__btn" id="btn-siguiente-1">Siguiente</a>
             </fieldset>
 
-            <fieldset class="soporte-form__fieldset">
+            <fieldset class="soporte-form__fieldset" id="soporte-fieldset-2">
                 <legend class="soporte-form__legend">Información del Producto</legend>
                 <div class="soporte-form__campo">
                     <label for="soporte-modelo" class="soporte-form__label">Modelo del Producto</label>
@@ -110,8 +110,8 @@ include_once __DIR__.'/templates/header.php';
                 </div>
 
                 <div class="soporte-form__btns">
-                <button class="soporte-form__btn" id="btn-siguiente">Anterior</button>
-                <button class="soporte-form__btn" id="btn-siguiente">Siguiente</button>
+                <a class="soporte-form__btn" id="btn-anterior-1">Anterior</a>
+                <a class="soporte-form__btn" id="btn-siguiente-2">Siguiente</a>
                 </div>
             </fieldset>
             
@@ -135,7 +135,7 @@ include_once __DIR__.'/templates/header.php';
                 </div>
 
                 <div class="soporte-form__btns">
-                <button class="soporte-form__btn" id="btn-siguiente">Anterior</button>
+                <a class="soporte-form__btn" id="btn-anterior-2">Anterior</a>
                 
                 <input class="soporte-form__submit" type="submit" value="Enviar">
                 </div>
