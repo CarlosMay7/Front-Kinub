@@ -18,7 +18,7 @@
 
         <nav class="navegacion">
             <a href="equipos.php" class="navegacion__link">Equipos</a>
-            <a href="#" class="navegacion__link">Soporte técnico</a>
+            <a href="soporte.php" class="navegacion__link">Soporte técnico</a>
             <a href="certificados.php" class="navegacion__link">Certificados</a>
             <a href="index.php#formulario" class="navegacion__link">Contacto</a>
         </nav>

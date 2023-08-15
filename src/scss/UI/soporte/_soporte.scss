@@ -1,0 +1,122 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.soporte {
+    &__contenido {        
+        overflow: hidden;
+    }
+}
+.soporte-form {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    
+    &__fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    &__legend {
+        text-align: center;
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    &__campo {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    &__input,
+    &__textarea,
+    &__select {
+        padding: .6rem 1rem;
+        border: none;
+        border-radius: .5rem;
+        background-color: lighten(v.$primario, 60%);
+
+        &:focus {
+            outline: none;
+        }
+    }
+    &__btns {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__btn,
+    &__submit {
+        margin-top: 2rem;
+        padding: .8rem 1.5rem;
+        border: none;
+        border-radius: .5rem;
+        background-color: v.$primario;
+        color: v.$blanco;
+    }
+    &__btn {
+        background-color: v.$primario;
+    }
+    &__submit {
+        background-color: v.$secundario;
+    }
+}
+.soporte-progreso {
+    display: flex;
+    margin: 2rem 0;
+    justify-content: space-around;
+    
+    &__paso {
+        width: 100%;
+        text-align: center;
+    }
+    &__paso:last-child {
+        .soporte-progreso__bullet {
+            &:after,
+            &::before {
+                display: none;
+            }
+        }
+    }
+    &__nombre {
+        margin-bottom: .8rem;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: v.$primario;
+    }
+    &__bullet {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2.5rem;
+        width: 2.5rem;
+        margin: 0 auto;
+        padding: 2rem;
+        border: .2rem solid v.$secundario;
+        border-radius: 50%;
+        background-color: v.$blanco;
+        font-weight: bold;
+        font-size: 1.7rem;
+
+        &:after,
+        &::before {
+            content: '';
+            position: absolute;
+            height: .3rem;
+            width: 19rem;
+            left: 4.1rem;
+            background-color: v.$secundario;
+        }
+        &::after {
+            transform: scaleX(0);
+            transform-origin: left;
+            animation: animate 400ms linear forwards;
+            background-color: v.$primario;
+        }
+    }
+    &__check {
+        visibility: hidden;
+    }
+}
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
