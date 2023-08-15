@@ -27,6 +27,7 @@
         font-weight: bold;
         @include m.texto-fluido(2rem, 6rem);
         margin-bottom: 2rem;
+        text-align: center;
     }
     &__campo {
         display: flex;
@@ -35,9 +36,37 @@
     }
     &__input,
     &__textarea {
-        background-color: transparent;
-        border: .1rem solid v.$blanco;
+        background: linear-gradient(to right, #ffffffdd, #ffffffdd);
+        border: none;
         border-radius: 1rem;
-        padding: .5rem 1rem;
+        padding: .8rem 1rem;
+
+        &:focus {
+            outline: none;
+        }
+    }
+    &__submit {
+        
+        input {
+            margin-top: 2rem;
+            border: none;
+            padding: 1rem 4.5rem 1rem 2rem;
+            position: relative;
+            background-color: v.$secundario;
+            color: v.$blanco;
+            font-weight: bold;
+            border-radius: .5rem;
+            transition: background-color 300ms ease;
+
+            &:hover {
+                background-color: darken(v.$secundario, 5%);
+            }
+        }
+        svg {
+            position: absolute;
+            left: 10.7rem;
+            bottom: 6.2rem;
+            z-index: 1;
+        }
     }
 }
