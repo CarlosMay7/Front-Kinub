@@ -34,3 +34,48 @@
         font-weight: 900;
     }
 }
+
+.producto {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+    transition: border 300ms ease-in-out;
+
+    &__contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__imagen {
+        height: 20rem;
+        width: 20rem;
+        transition: transform 300ms ease-in-out;
+    }
+
+    &__nombre {
+        margin: 0;
+        transition: transform 300ms ease-in-out;
+    }
+
+    &__boton {
+        @include m.boton(v.$blanco, lighten(v.$primario, 20%));
+        transition-property: background-color,transform;
+        transition-duration: 300ms;
+    }
+
+    &:hover {
+        border: 1px solid v.$secundario;
+        
+        .producto__imagen {
+            transform: scale(1.2);
+        }
+
+        .producto__nombre,
+        .producto__boton {
+            transform: translateY(2rem);
+        }
+    }
+}

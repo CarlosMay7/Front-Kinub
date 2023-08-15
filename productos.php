@@ -1,10 +1,7 @@
 <?php
     include_once __DIR__."/templates/header.php";
+    include_once __DIR__."/templates/hero.php";
 ?>
-
-    <div class="productos__hero">
-        <h1 class="productos__heading">Catálogo</h1>
-    </div>
 
 <main class="productos productos__contenedor">
     
@@ -68,40 +65,52 @@
     <div class="productos__grid">
 
         <div class="producto">
-            <img src="" alt="" class="producto__imagen">
-            <h3 class="producto__nombre">E-101</h3>
-            <a href="#" class="producto__boton">Ver más</a>
-        </div>
+            <img src="/src/img/taylor.jpg" alt="" class="producto__imagen">
+            <div class="producto__contenido">
+                <h3 class="producto__nombre">E-101</h3>
+                <a href="/producto.php" class="producto__boton">Ver más</a>                
+            </div>
+        </div> <!--Producto-->
 
         <div class="producto">
-            <img src="" alt="" class="producto__imagen">
-            <h3 class="producto__nombre">E-101</h3>
-            <a href="#" class="producto__boton">Ver más</a>
-        </div>
+            <img src="/src/img/taylor.jpg" alt="" class="producto__imagen">
+            <div class="producto__contenido">
+                <h3 class="producto__nombre">E-101</h3>
+                <a href="/producto.php" class="producto__boton">Ver más</a>                
+            </div>
+        </div> <!--Producto-->
 
         <div class="producto">
-            <img src="" alt="" class="producto__imagen">
-            <h3 class="producto__nombre">E-101</h3>
-            <a href="#" class="producto__boton">Ver más</a>
-        </div>
+            <img src="/src/img/taylor.jpg" alt="" class="producto__imagen">
+            <div class="producto__contenido">
+                <h3 class="producto__nombre">E-101</h3>
+                <a href="/producto.php" class="producto__boton">Ver más</a>                
+            </div>
+        </div> <!--Producto-->
 
         <div class="producto">
-            <img src="" alt="" class="producto__imagen">
-            <h3 class="producto__nombre">E-101</h3>
-            <a href="#" class="producto__boton">Ver más</a>
-        </div>
+            <img src="/src/img/taylor.jpg" alt="" class="producto__imagen">
+            <div class="producto__contenido">
+                <h3 class="producto__nombre">E-101</h3>
+                <a href="/producto.php" class="producto__boton">Ver más</a>                
+            </div>
+        </div> <!--Producto-->
 
         <div class="producto">
-            <img src="" alt="" class="producto__imagen">
-            <h3 class="producto__nombre">E-101</h3>
-            <a href="#" class="producto__boton">Ver más</a>
-        </div>
+            <img src="/src/img/taylor.jpg" alt="" class="producto__imagen">
+            <div class="producto__contenido">
+                <h3 class="producto__nombre">E-101</h3>
+                <a href="/producto.php" class="producto__boton">Ver más</a>                
+            </div>
+        </div> <!--Producto-->
 
         <div class="producto">
-            <img src="" alt="" class="producto__imagen">
-            <h3 class="producto__nombre">E-101</h3>
-            <a href="#" class="producto__boton">Ver más</a>
-        </div>
+            <img src="/src/img/taylor.jpg" alt="" class="producto__imagen">
+            <div class="producto__contenido">
+                <h3 class="producto__nombre">E-101</h3>
+                <a href="/producto.php" class="producto__boton">Ver más</a>                
+            </div>
+        </div> <!--Producto-->
     </div>
 
 </main>

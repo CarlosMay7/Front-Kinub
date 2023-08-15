@@ -1,0 +1,60 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.presentacion {
+
+    margin-top: 5rem;
+    &__grid {
+        display: grid;
+        @include m.grid(2, 5rem)
+    }
+
+    &__informacion {
+
+        color: darken(v.$gris, 20%);
+        span {
+            color: darken(v.$gris, 30%);
+            font-weight: 700;
+        }
+    }
+
+    &__boton {
+        @include m.boton(v.$blanco, darken(v.$secundario, 10%));
+        display: block;
+    }
+}
+
+.descripcion {
+
+    border-left: 10px solid lighten(v.$primario, 20%);
+    padding-left: 2rem;
+    &__heading {
+        color: v.$secundario;
+        font-weight: 700;
+        text-align: left;
+        margin: 0;
+    }
+
+    &__texto {
+        color: darken(v.$gris, 20%)
+    }
+}
+
+.especificaciones {
+    @extend .descripcion;
+    margin-top: 5rem;
+    &__heading {
+        color: v.$secundario;
+        font-weight: 700;
+        text-align: left;
+        margin: 0;
+    }
+
+    &__texto {
+        @extend .presentacion__informacion;
+    }
+}
+
+.descarga {
+    @extend .descripcion;
+}
