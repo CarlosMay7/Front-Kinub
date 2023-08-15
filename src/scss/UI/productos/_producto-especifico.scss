@@ -24,10 +24,26 @@
     }
 }
 
+.nav-producto {
+    @include m.grid(3, 0);
+    text-align: center;
+
+    &__enlace {
+        padding: 2rem 0;
+        margin: 4rem 0;
+        color: v.$blanco;
+        &:nth-child(odd){
+            background-color: lighten(v.$primario, 10%);
+        }
+
+        &:nth-child(even){
+            background-color: v.$secundario;
+        }
+    }
+}
+
 .descripcion {
 
-    border-left: 10px solid lighten(v.$primario, 20%);
-    padding-left: 2rem;
     &__heading {
         color: v.$secundario;
         font-weight: 700;
@@ -35,14 +51,16 @@
         margin: 0;
     }
 
-    &__texto {
+    &__texto-contenedor {
+        margin-top: 4rem;
+        border-left: 10px solid lighten(v.$primario, 20%);
+        padding-left: 2rem;
         color: darken(v.$gris, 20%)
     }
 }
 
 .especificaciones {
-    @extend .descripcion;
-    margin-top: 5rem;
+    margin-top: 4rem;
     &__heading {
         color: v.$secundario;
         font-weight: 700;
@@ -50,11 +68,38 @@
         margin: 0;
     }
 
-    &__texto {
-        @extend .presentacion__informacion;
+    &__texto-contenedor {
+        margin-top: 4rem;
+        border-left: 10px solid lighten(v.$primario, 20%);
+        padding-left: 2rem;
+        color: darken(v.$gris, 20%)
     }
 }
 
 .descarga {
-    @extend .descripcion;
+    margin-top: 4rem;
+
+    &__heading {
+        color: v.$secundario;
+        font-weight: 700;
+        text-align: left;
+        margin: 0;
+    }
+
+    &__acordion-contenedor {
+        margin-top: 4rem;
+        border-left: 10px solid lighten(v.$primario, 20%);
+        padding-left: 2rem;
+        color: darken(v.$gris, 20%)
+    }
+
+    &__lista {
+        padding-left: 2rem;
+        list-style: circle;
+    }
+}
+
+.accordion-button {
+    font-size: 1.6rem;
+    color: darken(v.$gris, 20%);
 }
