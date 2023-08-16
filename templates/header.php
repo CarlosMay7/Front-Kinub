@@ -52,7 +52,7 @@
     <!--Falta funcion mostrar enlace activo-->
     <nav class="navegacion-mobile">
         <a href="equipos.php" class="navegacion-mobile__link activo">Equipos</a>
-        <a href="#" class="navegacion-mobile__link">Soporte técnico</a>
+        <a href="soporte.php" class="navegacion-mobile__link">Soporte técnico</a>
         <a href="certificados.php" class="navegacion-mobile__link">Certificados</a>
         <a href="index.php#formulario" class="navegacion-mobile__link">Contacto</a>
     </nav>

@@ -1100,6 +1100,7 @@ h3 {
 .soporte-form {
   display: grid;
   grid-template-columns: repeat(3, 100%);
+  transition: transform 300ms ease-in-out;
 }
 .soporte-form__fieldset {
   display: flex;
@@ -1136,6 +1137,8 @@ h3 {
   border-radius: 0.5rem;
   background-color: #0032ab;
   color: #FFFFFF;
+  text-align: center;
+  cursor: pointer;
 }
 .soporte-form__btn {
   background-color: #0032ab;
@@ -1146,8 +1149,20 @@ h3 {
 
 .soporte-progreso {
   display: flex;
-  margin: 2rem 0;
+  width: 26rem;
+  margin: 2rem auto;
   justify-content: space-around;
+}
+@media (min-width: 400px) {
+  .soporte-progreso {
+    width: 35rem;
+  }
+}
+@media (min-width: 768px) {
+  .soporte-progreso {
+    width: auto;
+    margin: 2rem 0;
+  }
 }
 .soporte-progreso__paso {
   width: 100%;
@@ -1157,9 +1172,19 @@ h3 {
   display: none;
 }
 .soporte-progreso__nombre {
+  display: none;
   margin-bottom: 0.8rem;
   font-size: 1.8rem;
   font-weight: bold;
+  color: #00a7de;
+  transition: color 300ms ease;
+}
+@media (min-width: 400px) {
+  .soporte-progreso__nombre {
+    display: block;
+  }
+}
+.soporte-progreso__nombre--active {
   color: #0032ab;
 }
 .soporte-progreso__bullet {
@@ -1176,16 +1201,30 @@ h3 {
   background-color: #FFFFFF;
   font-weight: bold;
   font-size: 1.7rem;
+  transition: all 300ms ease;
 }
 .soporte-progreso__bullet:after, .soporte-progreso__bullet::before {
   content: "";
   position: absolute;
   height: 0.3rem;
-  width: 19rem;
+  width: 5rem;
   left: 4.1rem;
   background-color: #00a7de;
 }
-.soporte-progreso__bullet::after {
+@media (min-width: 400px) {
+  .soporte-progreso__bullet:after, .soporte-progreso__bullet::before {
+    width: 11rem;
+  }
+}
+@media (min-width: 768px) {
+  .soporte-progreso__bullet:after, .soporte-progreso__bullet::before {
+    width: 19rem;
+  }
+}
+.soporte-progreso__bullet--active {
+  border-color: #0032ab;
+}
+.soporte-progreso__bullet--active::after {
   transform: scaleX(0);
   transform-origin: left;
   animation: animate 400ms linear forwards;

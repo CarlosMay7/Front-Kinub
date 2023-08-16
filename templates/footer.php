@@ -18,5 +18,6 @@
     <script src="/src/js/youtube.js"></script>
     <script src="/src/js/menuMobile.js"></script>
     <script src="/src/js/productos.js"></script>
+    <script src="/src/js/soporteFormulario.js"></script>
 </body>
 </html>
